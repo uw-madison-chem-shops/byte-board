@@ -6,6 +6,8 @@ Small circuit board project designed to practice soldering in UW-Madison Chemist
 
 This PCB was designed using KiCad 7.
 
+See `byte.pdf` for schematic.
+
 Printed circuit board fabrication files can be found in the gerber directory.
 PCB images generated with [tracespace](https://github.com/tracespace/tracespace) follow.
 
