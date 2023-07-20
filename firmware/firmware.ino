@@ -151,6 +151,9 @@ ISR(PCINT0_vect) {
   if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000)
     value--;
  
+ if(value > 255){
+   value = 0;
+ }
   lastEncoded = encoded; //store this value for next time
  
   value &= 0b1111111111;
