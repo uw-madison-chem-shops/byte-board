@@ -122,6 +122,10 @@ void loop() {
       hex = true;
     }
   }
+  // Overflows to 0 if value > 255, (7 Segment LED)
+  if((value / 4) > 255){
+    value = 0;
+  }
   spiTransfer(0x63, rotateOne(flipByte(value/4)));
   write7Seg(value/4);
   writeIndicators();
@@ -150,7 +154,11 @@ ISR(PCINT0_vect) {
     value++;
   if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000)
     value--;
- 
+
+// Overflows to 0 if encoded > 255, (Nibbles)
+ if(encoded > 255){
+   encoded = 0;
+ }
   lastEncoded = encoded; //store this value for next time
  
   value &= 0b1111111111;
