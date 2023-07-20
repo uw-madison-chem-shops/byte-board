@@ -124,7 +124,7 @@ void loop() {
   }
   // Overflows to 0 if value > 255, (7 Segment LED)
   if((value / 4) > 255){
-    value = 0
+    value = 0;
   }
   spiTransfer(0x63, rotateOne(flipByte(value/4)));
   write7Seg(value/4);
