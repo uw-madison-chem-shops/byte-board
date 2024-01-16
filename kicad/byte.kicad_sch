@@ -6,8 +6,8 @@
 
   (title_block
     (title "Byte Board")
-    (date "2023-06-05")
-    (rev "B")
+    (date "2024-01-16")
+    (rev "C")
     (company "University of Wisconsin-Madison")
     (comment 1 "Department of Chemistry")
     (comment 2 "Instrument Shop")
